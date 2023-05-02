@@ -3,18 +3,36 @@
   "version": "1.1.3",
   "description": "",
   "keywords": ["security_gate"],
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js", 
   "bin": {
-    "security_gate": "./dist/main.js"
+    "security_gate": "./lib/esm/main.js"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build:watch": "tsc -w"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcsplcompusoft/security_gate"
+  },
   "author": "Jayrajsinh zala",
   "license": "ISC",
   "devDependencies": {
     "@types/glob": "^8.0.0",
     "@types/node": "^18.11.18"
-  },
+  },  
   "dependencies": {
     "glob": "^8.0.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/kcsplcompusoft/security_gate/issues"
+  },
+  "homepage": "https://github.com/kcsplcompusoft/security_gate#readme"
 }
