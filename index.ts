@@ -18,7 +18,7 @@ const lintFile = (filePath: string) => {
 }
 
 // get the all filenames with .js, .ts, .tsx, .jsx extension
-let fileNames = []
+let fileNames: string[] = []
 glob("**/*.js", (err, files) => {
     files.forEach(element => {
         fileNames.push(element)
