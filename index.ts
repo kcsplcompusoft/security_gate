@@ -11,8 +11,9 @@ const lintFile = (filePath: string) => {
             }
         } catch (error) {
             console.error(error);
-            process.exit(1)
+            process.exit(1);
         }
+        //iuhcujdiudvh
     })
 }
 
